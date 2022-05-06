@@ -18,17 +18,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
         Function func = new Function();
         System.out.print("Enter value: ");
-        int i = 1;
         while (true) {
             txt = in.nextLine();
             try {
                 double x = Double.parseDouble(txt);
                 func.x = x;
                 func.getY();
-                if(i == 1){
-                    System.out.println("You can enter one of the following commands: save, upload, check, stop");
-                    i++;
-                }
             } catch (Exception IOe) {
                 if (txt.equalsIgnoreCase("save")) {
                     try (ObjectOutputStream wr = new ObjectOutputStream(new FileOutputStream("object.txt"))) {
