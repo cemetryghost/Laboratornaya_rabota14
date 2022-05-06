@@ -24,6 +24,7 @@ public class Main {
                 double x = Double.parseDouble(txt);
                 func.x = x;
                 func.getY();
+                System.out.println("You can enter one of the following commands: save, upload, check, stop");
             } catch (Exception IOe) {
                 if (txt.equalsIgnoreCase("save")) {
                     try (ObjectOutputStream wr = new ObjectOutputStream(new FileOutputStream("object.txt"))) {
